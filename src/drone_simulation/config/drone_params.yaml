@@ -1,0 +1,14 @@
+path_generator_node_withoutSrv:
+  ros__parameters:
+    # Paramètres pour le path_generator_node
+    max_speed: 2.0  # Vitesse maximale du drone (en m/s)
+    step_size: 0.5  # Taille des pas pour générer le chemin (en mètres)
+    timeout: 5.0    # Temps d'attente avant de générer un nouveau chemin (en secondes)
+
+obstacle_avoider_node:
+  ros__parameters:
+    # Paramètres pour l'obstacle_avoider_node
+    safety_distance: 1.0  # Distance de sécurité pour éviter les obstacles (en mètres)
+    max_obstacle_size: 0.5  # Taille maximale d'un obstacle (en mètres)
+    scan_topic: "/scan"  # Topic pour les données LiDAR
+    corrected_path_topic: "/corrected_path"  # Topic pour le chemin corrigé

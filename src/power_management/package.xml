@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package format="3">
+  <name>power_management</name>
+  <version>0.0.1</version>
+  <description>Package for managing power in drones.</description>
+  
+  <maintainer email="hafsa@example.com">Hafsa</maintainer>
+  <license>Apache-2.0</license>
+
+  <!-- Dépendances pour exécuter les scripts -->
+  <depend>rclpy</depend>
+  <depend>std_srvs</depend>
+  <!-- Dépendances pour les tests -->
+  <test_depend>ament_copyright</test_depend>
+  <test_depend>ament_flake8</test_depend>
+  <test_depend>ament_pep257</test_depend>
+  <test_depend>python3-pytest</test_depend>
+
+  <!-- Indiquer le type de build pour les packages Python -->
+  <export>
+    <build_type>ament_python</build_type>
+  </export>
+</package>
+

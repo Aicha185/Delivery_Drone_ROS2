@@ -1,0 +1,46 @@
+<?xml version="1.0" ?>
+<sdf version="1.6">
+  <world name="delivery_world">
+    <!-- Lumière -->
+    <include>
+      <uri>model://sun</uri>  <!-- Utilisez "sun" pour la lumière -->
+    </include>
+
+    <!-- Sol -->
+    <include>
+      <uri>model://ground_plane</uri>  <!-- Utilisez "ground_plane" pour le sol -->
+    </include>
+
+    <!-- Obstacles -->
+    <model name="box1">
+      <pose>2 2 0 0 0 0</pose>  <!-- Position de l'obstacle -->
+      <link name="link">
+        <collision name="collision">
+          <geometry>
+            <box>
+              <size>1 1 1</size>  <!-- Taille de l'obstacle -->
+            </box>
+          </geometry>
+        </collision>
+        <visual name="visual">
+          <geometry>
+            <box>
+              <size>1 1 1</size>  <!-- Taille de l'obstacle -->
+            </box>
+          </geometry>
+          <material>
+            <ambient>1 0 0 1</ambient>  <!-- Couleur rouge -->
+            <diffuse>1 0 0 1</diffuse>  <!-- Couleur rouge -->
+          </material>
+        </visual>
+      </link>
+    </model>
+
+    <!-- Drone -->
+    <include>
+      <uri>model://quadcopter</uri>  
+      <name>drone</name>
+      <pose>0 0 0.5 0 0 0</pose>  <!-- Position initiale du drone -->
+    </include>
+  </world>
+</sdf>
